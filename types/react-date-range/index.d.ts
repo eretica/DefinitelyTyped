@@ -118,6 +118,8 @@ export interface DateRangeProps extends Range, CommonCalendarProps {
     weekStartsOn?: number;
     /** default: true */
     showMonthAndYearPickers?: boolean;
+    /** default: true */
+    showDateDisplay?: boolean
     /** default: [] */
     rangeColors?: string[];
     /** default: */
@@ -144,6 +146,8 @@ export interface DateRangeProps extends Range, CommonCalendarProps {
     moveRangeOnFirstSelection?: boolean;
     /** default: false */
     editableDateInputs?: boolean;
+    /** default: none */
+    onRangeFocusChange?: ([rangesIndex, rangeStep]) => void;
 }
 
 export class DateRange extends React.Component<DateRangeProps> { }
